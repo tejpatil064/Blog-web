@@ -38,7 +38,7 @@ const Blogs = () => {
       console.error("Error deleting blog:", error);
     }
   };
-
+ 
   // Filter blogs based on search term
   const filteredBlogs = blogs.filter(
     (blog) =>

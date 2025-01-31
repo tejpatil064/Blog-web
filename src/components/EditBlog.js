@@ -60,7 +60,6 @@ function EditBlog() {
     e.preventDefault();
 
     let updatedImage = blogImage;
-
     // If an image is selected, upload it
     if (imageFile) {
       updatedImage = await uploadImage(imageFile);
