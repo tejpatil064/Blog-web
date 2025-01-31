@@ -1,0 +1,122 @@
+/* Basic styling for the AddBlog component */
+.add-blog {
+    max-width: 500px;
+    /* Medium size for large screens */
+    margin: 3rem auto;
+    padding: 1rem;
+    /* Normal padding for larger screens */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-blog p {
+    font-size: 24px;
+    /* Larger heading for larger screens */
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.add-blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="file"] {
+    padding: 0.75rem;
+}
+
+button.submit-btn {
+    padding: 0.5rem 2rem;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+    .add-blog {
+        max-width: 90%;
+        /* Make the form smaller on mobile */
+        padding: 1.5rem;
+        /* Decrease padding for mobile */
+        margin: 2rem auto;
+    
+    }
+
+    .add-blog h2 {
+        font-size: 1.8rem;
+        /* Smaller heading on mobile */
+        margin-bottom: 1rem;
+    }
+
+    .add-blog-form {
+        gap: 1rem;
+        /* Smaller gap between form elements */
+    }
+
+    .form-group {
+        gap: 0.5rem;
+        /* Less gap between label and input on mobile */
+    }
+
+    input,
+    textarea {
+        padding: 0.75rem;
+        /* Smaller padding for mobile inputs */
+        font-size: 1rem;
+        /* Smaller font size for mobile */
+    }
+
+    button.submit-btn {
+        padding: 0.75rem 1.5rem;
+        /* Smaller button size for mobile */
+        font-size: 1rem;
+        /* Smaller font size for button */
+    }
+
+    .error {
+        font-size: 0.9rem;
+        /* Smaller error message on mobile */
+    }
+}

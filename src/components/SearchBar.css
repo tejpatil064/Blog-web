@@ -1,0 +1,48 @@
+/* Searchbar.css */
+
+/* Container for the search bar */
+.search-bar-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+/* Styling for the search input */
+.search-bar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 300px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for the search bar */
+.search-bar:focus {
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 5px rgba(171, 223, 172, 0.6);
+    /* Green focus glow */
+}
+
+/* Placeholder text styling */
+.search-bar::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .search-bar {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-bar {
+        width: 150px;
+        font-size: 0.9rem;
+    }
+}

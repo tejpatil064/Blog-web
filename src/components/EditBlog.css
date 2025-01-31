@@ -1,0 +1,151 @@
+/* Edit Blog container */
+.edit-blog {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.edit-blog h2 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Form layout */
+.edit-blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Input field styling */
+input[type="text"],
+textarea,
+input[type="file"] {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for inputs */
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #f39c12;
+}
+
+/* Textarea styling */
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* File input styling */
+input[type="file"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Display the blog image */
+.edit-blog img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Submit button styling */
+button.update-button {
+    padding: 1rem 2.5rem;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.update-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Disabled button styling */
+button.update-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .edit-blog {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .edit-blog h2 {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+        gap: 0.75rem;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+
+    button.update-button {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+    }
+}
+
+/* Loading/Spinner (if needed for image upload) */
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #f39c12;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
