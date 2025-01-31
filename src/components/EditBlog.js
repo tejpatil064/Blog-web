@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../components/EditBlog.css";
-import Navbar from "../components/Navbar.js";
+
 
 function EditBlog() {
   const [title, setTitle] = useState("");
@@ -18,7 +18,10 @@ function EditBlog() {
 
   const fetchBlog = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+      const response = await axios.get(
+        `https://blog-web-backend.vercel.app/api/blogs/${id}`
+      );
+      // const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
       console.log(response.data);
       const { title, content, blogImage } = response.data.blog;
       setTitle(title);
@@ -65,7 +68,12 @@ function EditBlog() {
     console.log(updatedImage);
     try {
       console.log(updatedImage);
-      await axios.put(`http://localhost:3000/api/blogs/${id}`, {
+      // await axios.put(`http://localhost:3000/api/blogs/${id}`, {
+      //   title,
+      //   content,
+      //   blogImage: updatedImage, // Use the updated image URL
+      // });
+      await axios.put(`https://blog-web-backend.vercel.app/api/blogs/${id}`, {
         title,
         content,
         blogImage: updatedImage, // Use the updated image URL

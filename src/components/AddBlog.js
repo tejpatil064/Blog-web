@@ -69,8 +69,8 @@ const AddBlog = () => {
 
     try {
       setLoading(true);
-      // const formURL = "https://register-form-5dub.vercel.app/api/signup";
-      const formURL = "http://localhost:3000/api/blogs"; // Use correct URL
+      const formURL = "https://register-form-5dub.vercel.app/api/signup";
+      // const formURL = "http://localhost:3000/api/blogs"; // Use correct URL
       await axios.post(formURL, formData);
       toast.success("Blog posted successfully!");
       setFormData({

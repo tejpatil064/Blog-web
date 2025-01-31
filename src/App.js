@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Views/Home";
 import AddBlog from "./components/AddBlog";
 import Blogs from "./components/Blogs";
 import EditBlog from "./components/EditBlog";

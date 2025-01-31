@@ -18,7 +18,10 @@ const Blogs = () => {
   // Fetch the data from the backend
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/blogs");
+      const response = await axios.get(
+        "https://blog-web-backend.vercel.app/api/blogs"
+      );
+      // const response = await axios.get("http://localhost:3000/api/blogs");
       setBlogs(response.data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
@@ -28,7 +31,8 @@ const Blogs = () => {
   // Handle delete blog
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/blogs/${id}`);
+      // await axios.delete(`http://localhost:3000/api/blogs/${id}`);
+      await axios.delete(`https://blog-web-backend.vercel.app/api/blogs/${id}`);
       fetchBlogs();
     } catch (error) {
       console.error("Error deleting blog:", error);
